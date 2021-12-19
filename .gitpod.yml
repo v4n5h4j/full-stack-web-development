@@ -1,5 +1,7 @@
 tasks:
-  - init: |
-      echo 'TODO: build project'
-    command: |
-      echo 'TODO: start app'
+  - init: npm install
+    command: npm run dev
+  # one dash (-) equals one task
+  # command executes when workspace starts,
+  # we want to start development server anytime someone starts
+ 
