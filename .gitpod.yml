@@ -4,4 +4,7 @@ tasks:
   # one dash (-) equals one task
   # command executes when workspace starts,
   # we want to start development server anytime someone starts
+ports:
+  - port: 3000
+    onOpen: open-browser
  
