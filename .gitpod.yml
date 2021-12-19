@@ -1,8 +1,12 @@
 tasks:
   - init: npm install
-    command: npm run dev
+    command: |
+      export HMR_HOST=`gp url 3000` 
+      npm run dev
+      
+    # whenever a new env. starts, we want to get the url and store it in an environment variable
   # one dash (-) equals one task
-  # command executes when workspace starts,
+  # command executes whenever new workspace starts,
   # we want to start development server anytime someone starts
 ports:
   - port: 3000
