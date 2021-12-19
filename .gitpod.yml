@@ -1,3 +1,4 @@
+
 tasks:
   - init: npm install
     command: |
@@ -12,3 +13,7 @@ ports:
   - port: 3000
     onOpen: open-browser
  
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode
