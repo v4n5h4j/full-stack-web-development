@@ -1,5 +1,27 @@
 tasks:
-  - init: |
-      echo 'TODO: build project'
+  - init: npm install
     command: |
-      echo 'TODO: start app'
+      export HMR_HOST=`gp url 3000` 
+      npm run dev
+      
+  # whenever a new env. starts, we want to get the url and store it in an environment variable
+  # one dash (-) equals one task
+  # command executes whenever new workspace starts,
+  # we want to start development server anytime someone starts
+ports:
+  - port: 3000
+    onOpen: open-browser
+ 
+
+vscode:
+  extensions:
+    - svelte.svelte-vscode
+
+github:
+  prebuilds:
+    # Everytime main branch changes, run init.
+    master: true
+    # Everytime a branch is created, run init.
+    branches: true
+    # Same behaviour for pull request
+    pullRequests: true
