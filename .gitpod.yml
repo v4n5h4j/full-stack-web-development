@@ -19,7 +19,7 @@ vscode:
 
 github:
   prebuilds:
-    # Everytime main branch changes, run init.
+    # Everytime main branch changes, run init script (see init in tasks).
     master: true
     # Everytime a branch is created, run init.
     branches: true
